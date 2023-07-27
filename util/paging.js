@@ -17,12 +17,15 @@ exports.paging = (dataArr, pageNumber) => {
       pageCountList.push(pageCountList.length);
     }
   }
+
   // Data của 1 page và tổng số page
   pageCountList.map((page) => {
     const data = [];
 
     for (let i = page * 20; i < 20 + page * 20; i++) {
-      data.push(dataArr[i]);
+      if (dataArr[i]) {
+        data.push(dataArr[i]);
+      }
     }
 
     pages.push({
