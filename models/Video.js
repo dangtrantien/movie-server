@@ -3,11 +3,9 @@
 const path = require('path');
 const fs = require('fs');
 
-const rootDr = require('../util/path');
-
 // ==================================================
 
-const pathDr = path.join(rootDr, 'data', 'videoList.json');
+const pathDr = path.join(__dirname, '..', 'data', 'videoList.json');
 
 module.exports = class Video {
   static fetchAll(callback) {

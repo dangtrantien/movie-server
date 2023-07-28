@@ -3,12 +3,11 @@
 const path = require('path');
 const fs = require('fs');
 
-const rootDr = require('../util/path');
 const Genre = require('./Genre');
 
 // ==================================================
 
-const pathDr = path.join(rootDr, 'data', 'movieList.json');
+const pathDr = path.join(__dirname, '..', 'data', 'movieList.json');
 
 const getMovieList = (callback) => {
   const data = fs.readFileSync(pathDr);
